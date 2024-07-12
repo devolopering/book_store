@@ -1,0 +1,89 @@
+/* Umumiy uslublar */
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.header-left p {
+  margin: 0 20px;
+}
+
+.header-left a {
+  margin: 0 10px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right select {
+  appearance: none;
+  background: none;
+  border: none;
+  color: inherit; /* Rangi header rangiga mos */
+  font-size: 16px;
+  padding: 0;
+  margin: 0 10px;
+}
+
+.header-right select option {
+  color: black;
+}
+
+.header-right .mode-toggle {
+  margin: 0 10px;
+}
+
+.header-right .contact-info {
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.header-right a {
+  color: inherit; /* Rangi header rangiga mos */
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+/* Tungi rejim */
+.dark-mode {
+  background-color: #001b33;
+  color: white;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+/* Tungi rejim uchun header */
+.header.dark-mode {
+  background-color: #001b33;
+  color: white;
+}
+
+/* Kunduzgi rejim uchun header */
+.header.light-mode {
+  background-color: white;
+  color: black;
+}

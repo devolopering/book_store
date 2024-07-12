@@ -1,16 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Header from './components/header/Header';
+import { ThemeProvider, useTheme } from './ThemeContext';
+import { LanguageProvider } from './LanguageContext';
+import './App.css'; 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { isDarkMode } = useTheme();
 
   return (
-    <div>
-      appgit init
+    <div className={`container${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
+      <Header />
     </div>
-  )
+  );
 }
 
-export default App
+export default function Root() {
+  return (
+    <ThemeProvider>
+      <LanguageProvider>
+        <App />
+      </LanguageProvider>
+    </ThemeProvider>
+  );
+}
